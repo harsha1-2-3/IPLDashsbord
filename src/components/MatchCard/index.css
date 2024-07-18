@@ -1,0 +1,38 @@
+.RCMatch {
+  background-color: #1e293b;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 15px;
+  width: 40%;
+}
+
+.RCImg {
+  height: 50px;
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.RCHead {
+  color: white;
+  font-size: 15px;
+  text-align: center;
+}
+
+.RCPara {
+  color: white;
+  font-size: 10px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.RCResult {
+  color: white;
+  font-size: 18px;
+}
+
+.status {
+  color: #18ed66;
+}

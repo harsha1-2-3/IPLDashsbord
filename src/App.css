@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Bree serif;
+  font-weight: bold;
+}
+
+body {
+  margin: 0px;
+}
+
+@media (min-width: 768px) {
+  .banner {
+    height: 280px;
+  }
+
+  .TMHead {
+    font-size: 35px;
+  }
+
+  .LMCont {
+    flex-direction: row;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .LMTextCont {
+    justify-content: space-around;
+  }
+
+  .LMTopCont {
+    width: 70%;
+  }
+
+  .LMImg {
+    margin-left: 60px;
+  }
+
+  .LMBottomCont {
+    align-items: flex-end;
+    width: 65%;
+  }
+
+  .LMHead {
+    font-size: 30px;
+  }
+
+  .FIHead {
+    font-size: 25px;
+  }
+
+  .LMPara {
+    font-size: 20px;
+  }
+
+  .LMImg {
+    height: 200px;
+    width: 180px;
+  }
+
+  .RCMatchesCont {
+    justify-content: center;
+  }
+
+  .RCMatch {
+    width: 40%;
+    padding: 25px;
+  }
+
+  .RCImg {
+    height: 80px;
+    width: 70px;
+  }
+
+  .RCHead {
+    font-size: 25px;
+  }
+
+  .RCPara {
+    font-size: 15px;
+  }
+
+  .RCResult {
+    font-size: 25px;
+  }
+
+  .bg {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/ipl-dashboard-lg-bg.png');
+  }
+
+  .bgNF {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/ipl-dashboard-lg-bg.png');
+  }
+
+  .headNF {
+    font-size: 50px;
+  }
+
+  .iplLogo {
+    height: 90px;
+    width: 60px;
+  }
+
+  .dashHead {
+    font-size: 55px;
+  }
+
+  .teamCard {
+    padding: 20px;
+    width: 45%;
+  }
+
+  .teamImg {
+    height: 75px;
+    width: 55px;
+  }
+
+  .teamHead {
+    font-size: 25px;
+  }
+}

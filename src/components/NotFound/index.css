@@ -1,0 +1,17 @@
+.bgNF {
+  margin-top: 30px;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/ipl-dashboard-sm-bg.png');
+  background-size: cover;
+  min-height: 100vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.headNF {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
