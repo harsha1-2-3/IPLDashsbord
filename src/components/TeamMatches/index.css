@@ -10,6 +10,10 @@
   min-height: 100vh;
 }
 
+.piee {
+  background-color: #0f172a;
+}
+
 .TMCard {
   display: flex;
   flex-direction: column;
@@ -31,9 +35,26 @@
 .RCMatchesCont {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  white-space: nowrap;
   list-style-type: none;
   padding-left: 0px;
+  padding: 0px;
   width: 100%;
   background-color: transparent;
+}
+.backBtn {
+  background-color: #ffffff33;
+  border: 1px solid white;
+  cursor: pointer;
+  outline: none;
+  height: 40px;
+  width: 100px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  border-top-left-radius: 45%;
+  border-bottom-left-radius: 45%;
+}
+.link {
+  text-decoration: none;
 }

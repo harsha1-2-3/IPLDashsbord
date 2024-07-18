@@ -1,5 +1,7 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
+import {PieChart, Pie, Legend, Cell, ResponsiveContainer} from 'recharts'
 import LatestMatch from '../LatestMatch/index'
 import MatchCard from '../MatchCard/index'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
@@ -63,13 +65,59 @@ class TeamMatches extends Component {
   }
 
   render() {
-    const {latestMatchData, recentMatchesData, bannerUrl, isLoading} =
-      this.state
+    const {
+      latestMatchData,
+      recentMatchesData,
+      bannerUrl,
+      isLoading,
+    } = this.state
+
+    const wonMatches = recentMatchesData.filter(
+      each => each.matchStatus === 'Won',
+    )
+    const loseMatches = recentMatchesData.filter(
+      each => each.matchStatus === 'Lost',
+    )
+    const drawnMatches = recentMatchesData.filter(
+      each => each.matchStatus === 'Draw',
+    )
+
+    let won = wonMatches.length
+    let lost = loseMatches.length
+    let drawn = drawnMatches.length
+
+    if (latestMatchData.matchStatus === 'Won') {
+      won += 1
+    } else if (latestMatchData.matchStatus === 'Lost') {
+      lost += 1
+    } else {
+      drawn += 1
+    }
+
+    const pieData = [
+      {
+        name: 'Won',
+        count: won,
+      },
+      {
+        name: 'Lost',
+        count: lost,
+      },
+      {
+        name: 'Draw',
+        count: drawn,
+      },
+    ]
+
+    console.log(won, 'Won')
+    console.log(lost, 'Lost')
+    console.log(drawn, 'Draw')
+    console.log(pieData)
 
     return (
       <div className="bgTMCont">
         {isLoading ? (
-          <div testid="loader">
+          <div data-testid="loader">
             <Loader type="Oval" color="blue" height={50} width={50} />
           </div>
         ) : (
@@ -79,18 +127,49 @@ class TeamMatches extends Component {
               <h1 className="TMHead">Latest Matches</h1>
               <LatestMatch
                 key={latestMatchData.id}
-                LMDetails={latestMatchData}
+                lMDetails={latestMatchData}
               />
+              <ResponsiveContainer width="100%" height={300}>
+                <PieChart className="piee">
+                  <Pie
+                    cx="50%"
+                    cy="50%"
+                    data={pieData}
+                    startAngle={0}
+                    endAngle={360}
+                    innerRadius="40%"
+                    outerRadius="70%"
+                    dataKey="count"
+                    label
+                  >
+                    <Cell name="Won" fill="#4CAF50" />
+                    <Cell name="Lost" fill="#F44336" />
+                    <Cell name="Draw" fill="#FFC107" />
+                  </Pie>
+                  <Legend
+                    iconType="circle"
+                    layout="vertical"
+                    verticalAlign="middle"
+                    align="right"
+                  />
+                </PieChart>
+              </ResponsiveContainer>
               <ul className="RCMatchesCont">
-                {recentMatchesData.map(RCDetails => (
-                  <MatchCard RCDetails={RCDetails} key={RCDetails.id} />
+                {recentMatchesData.map(rCDetails => (
+                  <MatchCard rCDetails={rCDetails} key={rCDetails.id} />
                 ))}
               </ul>
             </div>
+            <Link className="link" to="/">
+              <button type="button" className="backBtn">
+                Back
+              </button>
+            </Link>
           </div>
         )}
       </div>
     )
   }
 }
+
 export default TeamMatches

@@ -1,7 +1,7 @@
 import './index.css'
 
 const LatestMatch = props => {
-  const {LMDetails} = props
+  const {lMDetails} = props
   const {
     umpires,
     result,
@@ -12,7 +12,7 @@ const LatestMatch = props => {
     competingTeamLogo,
     firstInnings,
     secondInnings,
-  } = LMDetails
+  } = lMDetails
 
   return (
     <div className="LMCont">

@@ -42,7 +42,7 @@ class Home extends Component {
           </div>
           <ul className="teamsList">
             {isLoading ? (
-              <div testid="loader">
+              <div data-testid="loader">
                 <Loader type="Oval" color="#ffffff" height={50} width={50} />
               </div>
             ) : (

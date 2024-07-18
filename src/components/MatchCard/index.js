@@ -1,8 +1,8 @@
 import './index.css'
 
 const MatchCard = props => {
-  const {RCDetails} = props
-  const {result, competingTeamLogo, competingTeam, matchStatus} = RCDetails
+  const {rCDetails} = props
+  const {result, competingTeamLogo, competingTeam, matchStatus} = rCDetails
   const lostOrWon = 'status'
 
   return (
